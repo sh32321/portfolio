@@ -1,0 +1,84 @@
+@use "../../styles/basic" as *;
+
+header {
+  display: flex;
+  height: 100vh;
+
+  @media only screen and (max-width: $media-small) {
+    flex-direction: column;
+    height: 120vh;
+  }
+}
+
+.left {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.title-container {
+  @include flexCenter;
+  flex-direction: column;
+}
+.title {
+  height: 50px;
+  overflow: hidden;
+
+  .title-wrapper {
+    height: 100%;
+    animation: move 5s ease-in-out infinite alternate;
+
+    @keyframes move {
+      50% {
+        transform: translateY(-50px);
+      }
+      100% {
+        transform: translateY(-100px);
+      }
+    }
+  }
+
+  .title-item {
+    height: 50px;
+    font-size: 40px;
+    font-weight: 500;
+    font-family: $font-primary;
+    display: flex;
+    align-items: center;
+
+    @media only screen and (max-width: $media-small) {
+      font-size: 25px;
+    }
+  }
+}
+
+.right {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.right img {
+  width: 70%;
+  height: auto;
+  animation-name: spin;
+  animation-duration: 80000ms;
+  animation-iteration-count: infinite;
+  animation-timing-function: linear;
+  transition: ease-in-out;
+
+  @media only screen and (max-width: $media-small) {
+    width: 50%;
+  }
+}
+
+@keyframes spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}

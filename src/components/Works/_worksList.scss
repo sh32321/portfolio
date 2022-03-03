@@ -1,0 +1,55 @@
+@use "../../styles/basic" as *;
+
+.works-container {
+  padding: 1.5rem;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(450px, 1fr));
+  gap: 20px;
+}
+
+.works-title-container {
+  @include flexCenter;
+  flex-direction: column;
+}
+
+.works-title {
+  font-family: $font-primary;
+  font-size: 45px;
+  @media only screen and (max-width: $media-medium) {
+    margin: -5px 0;
+    font-size: 35px;
+  }
+  @media only screen and (max-width: $media-small) {
+    margin: -10px 0;
+    font-size: 25px;
+  }
+}
+
+.btn-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.works-links {
+  text-decoration: none;
+  padding: 10px;
+  margin: 10px;
+  font-size: 12px;
+
+  @media only screen and (max-width: $media-small) {
+    padding: 6px;
+    margin: 6px;
+  }
+  @media only screen and (max-width: $media-medium) {
+    padding: 6px;
+    margin: 6px;
+    font-size: 12px;
+  }
+
+  @include btnDefault;
+
+  &:hover {
+    @include btnHoverEffect;
+  }
+}

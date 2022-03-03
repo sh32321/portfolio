@@ -1,0 +1,34 @@
+@use "../../styles//basic" as *;
+
+.nav-container {
+  margin: 2rem;
+  display: flex;
+  justify-content: flex-end;
+  @media only screen and (max-width: $media-small) {
+    justify-content: center;
+  }
+
+  .nav-btn {
+    .resume {
+      text-decoration: none;
+      color: $color-primary;
+    }
+    padding: 6px;
+    margin-left: 1.5rem;
+    @include btnDefault;
+    @media only screen and (max-width: $media-small) {
+      font-size: 12px;
+      padding: 5px;
+      margin-left: 0.7rem;
+    }
+
+    &:hover {
+      @include btnHoverEffect;
+      @media only screen and (max-width: $media-small) {
+        font-size: 12px;
+        padding: 5px;
+        margin-left: 0.7rem;
+      }
+    }
+  }
+}

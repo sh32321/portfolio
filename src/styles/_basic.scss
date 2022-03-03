@@ -1,0 +1,62 @@
+$font-primary: "Cormorant Garamond", serif;
+$font-secondary: "Open Sans Condensed", sans-serif;
+
+$color-primary: #fff;
+$color-secondary: #787878;
+
+$media-large: 980px;
+$media-medium: 768px;
+$media-small: 500px;
+
+body {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  background-color: #000;
+  color: $color-primary;
+}
+
+@mixin flexCenter {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+@mixin btnHoverEffect {
+  transition-duration: 0.5s;
+  cursor: pointer;
+  box-shadow: 1px 1px rgb(219, 210, 210);
+  border: 1px solid rgb(219, 210, 210);
+  letter-spacing: 2px;
+}
+
+@mixin btnDefault {
+  font-family: $font-primary;
+  font-size: 18px;
+  background-color: transparent;
+  border: 1px solid #787878;
+  color: #fff;
+}
+
+@mixin circle {
+  width: 0.6rem;
+  height: 0.6rem;
+  border-radius: 50%;
+  margin: 3px;
+}
+
+.line {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100px;
+  height: 100px;
+  position: relative;
+  &::before {
+    content: "";
+    position: absolute;
+    height: 1px;
+    background: $color-secondary;
+    width: 70%;
+  }
+}

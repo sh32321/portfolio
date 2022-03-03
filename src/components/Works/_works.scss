@@ -1,0 +1,52 @@
+@use "../../styles/basic" as *;
+
+.works-container {
+  @include flexCenter;
+}
+
+.works {
+  height: 30vh; // has to change
+  border: 1px solid $color-primary;
+  margin: auto;
+  overflow: hidden;
+
+  @media only screen and (max-width: $media-small) {
+    height: 10vh;
+    width: 60%;
+  }
+  @media only screen and (max-width: $media-medium) {
+    height: 25vh;
+    width: 70%;
+  }
+}
+
+.browser {
+  height: 20px;
+  background-color: rgba(0, 0, 0, 0.7);
+  display: flex;
+  align-items: center;
+  position: sticky;
+  z-index: 2;
+}
+
+.red {
+  background-color: rgba(255, 0, 0, 0.7);
+  @include circle;
+}
+.grey {
+  background-color: rgba(128, 128, 128, 0.7);
+  @include circle;
+}
+.green {
+  background-color: rgba(0, 128, 0, 0.7);
+  @include circle;
+}
+
+.img {
+  width: 100%;
+  transition: all 10s ease;
+}
+
+.works:hover .img {
+  transform: translateY(-100%);
+}

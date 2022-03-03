@@ -1,0 +1,71 @@
+@use "../../styles/basic" as *;
+
+.about-container {
+  display: flex;
+  height: 120vh;
+
+  @media only screen and (max-width: $media-small) {
+    flex-direction: column;
+    height: 150vh;
+  }
+}
+
+.right-container {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  @media only screen and (max-width: $media-small) {
+    margin-top: -50%;
+  }
+}
+
+.left-container {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.myself-title {
+  margin-top: -20px;
+  font-size: 45px;
+  font-family: $font-primary;
+  @media only screen and (max-width: $media-small) {
+    font-size: 25px;
+  }
+  @media only screen and (max-width: $media-medium) {
+    font-size: 40px;
+  }
+}
+
+.myself-subcontainer {
+  width: 50%;
+}
+
+.myself-subtitle {
+  font-size: 25px;
+  font-family: $font-secondary;
+  margin-bottom: -20px;
+  text-align: justify;
+  @media only screen and (max-width: $media-small) {
+    font-size: 18px;
+  }
+  @media only screen and (max-width: $media-medium) {
+    font-size: 18px;
+  }
+}
+
+.logo {
+  width: 70%;
+  margin: auto;
+
+  @media only screen and (max-width: $media-small) {
+    width: 60%;
+  }
+  @media only screen and (max-width: 600px) {
+    width: 50%;
+  }
+}

@@ -1,7 +1,7 @@
 import React from "react";
 import "./_works.scss";
 
-const Works = ({ img, link }) => {
+const Works = ({ img, link, webPage }) => {
   return (
     <div className="works-container">
       <div className="works">

@@ -53,3 +53,13 @@
     @include btnHoverEffect;
   }
 }
+
+.desc-container {
+  width: 50%;
+  margin: auto;
+  p {
+    font-family: $font-secondary;
+    font-size: 20px;
+    text-align: justify;
+  }
+}

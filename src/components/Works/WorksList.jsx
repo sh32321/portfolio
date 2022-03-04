@@ -14,7 +14,7 @@ const WorksList = () => {
       <div className="works-container">
         {works.map((item) => (
           <>
-            <div>
+            <div className="works-subcontainer">
               <Works img={item.img} link={item.link} key={item.id} />
               <div className="btn-container">
                 <a
@@ -33,6 +33,9 @@ const WorksList = () => {
                 >
                   Demo
                 </a>
+              </div>
+              <div className="desc-container">
+                <p>{item.desc}</p>
               </div>
             </div>
           </>

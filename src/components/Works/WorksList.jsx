@@ -23,7 +23,7 @@ const WorksList = () => {
                   target="_blank"
                   rel="noreferrer"
                 >
-                  GitHub
+                  Github
                 </a>
                 <a
                   href={item.link}

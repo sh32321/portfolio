@@ -82,10 +82,14 @@ form {
 
   @media only screen and (max-width: $media-small) {
     font-size: 12px;
+    margin: 7px 0;
   }
 }
 
 .email {
   font-family: $font-secondary;
   font-size: 22px;
+  @media only screen and (max-width: $media-small) {
+    font-size: 14px;
+  }
 }

@@ -44,8 +44,7 @@ header {
     font-size: 40px;
     font-weight: 500;
     font-family: $font-primary;
-    display: flex;
-    align-items: center;
+    text-align: center;
 
     @media only screen and (max-width: $media-small) {
       font-size: 25px;
